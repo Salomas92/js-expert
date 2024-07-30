@@ -1,0 +1,7 @@
+nvm install 20 -> instala a versão 20
+nm install --lts -> instala a versão long-term support {versão recomendadda}
+nvm list
+nvm use 18 -> use a versão que ja está instalado na minha máquina
+nvm alias default (?) -> define a versão padrão do Node.js para ser a versão escolhida
+criar .nvmrc - com a versão desejada  nvm use para ativar aquela versão
+nvm -v > .nvmrc -> salva a versão apropriada para aquele projeto
