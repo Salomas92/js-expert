@@ -1,6 +1,6 @@
 {
   "name": "aula01-mocks",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,9 @@
     "node": "18"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "erickwendel",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^9.8.0"
+  }
 }
