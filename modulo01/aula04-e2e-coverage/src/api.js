@@ -10,19 +10,20 @@ const routes = {
     res.write('contact us page')
     return res.end()
   },
+  //curl -i -X POST --data '{"username": "Salomas","password": "123"}' localhost:3000/login
   '/login:post': async (req, res) => {
     const user = JSON.parse(await once(req, "data"))
-    
+    const toLower = (text) => text.toLowerCase()
     if (
-      user.username !== DEFAULT_USER.username ||
+      toLower(user.username) !== toLower(DEFAULT_USER.username) ||
       user.password !== DEFAULT_USER.password
     ) {
       res.writeHead(401)
-      res.end("Logging Faild!")
+      res.end("Log in Failed!")
       return
     }
 
-    return res.end("ok")
+    return res.end("Log in succeded!")
   },
 
   default(req, res) {
@@ -40,3 +41,5 @@ function handle(req, res) {
 
 const app = http.createServer(handle)
 .listen(3000, () => console.log('running at 3000'))
+
+module.exports = app
